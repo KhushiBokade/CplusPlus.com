@@ -1,0 +1,295 @@
+/* Color Palette */
+:root {
+    --primary-blue: #2563EB;      /* Vibrant blue for links and buttons */
+    --accent-orange: #F28C38;     /* Bright orange for hover effects */
+    --gradient-start: #4F46E5;    /* Gradient start for banner */
+    --gradient-end: #7C3AED;      /* Gradient end for banner */
+    --background: #F0F4F8;        /* Light background */
+    --text-dark: #1F2937;         /* Dark text */
+    --text-muted: #6B7280;        /* Muted text */
+    --shadow: rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    --border: #E5E7EB;            /* Light border */
+  }
+  
+  /* Main Container */
+  .tutorials-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: var(--background);
+    min-height: 100vh;
+  }
+  
+  /* Banner Section */
+  .banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 12px var(--shadow);
+  }
+  
+  .banner-text {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+  
+  .banner-text span::before {
+    content: 'ℹ️ ';
+    font-size: 1.2rem;
+  }
+  
+  .banner-button {
+    background: var(--primary-blue);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+  }
+  
+  .banner-button:hover {
+    background: var(--accent-orange);
+  }
+  
+  .arrow {
+    font-size: 1.2rem;
+  }
+  
+  /* Content Section */
+  .content {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  /* Tutorials Section */
+  .tutorials {
+    width: 70%;
+  }
+  
+  .tutorials h2 {
+    font-size: 2.5rem;
+    /* color: var(--text-dark); */
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    border-bottom: 2px solid var(--primary-blue);
+    padding-bottom: 0.5rem;
+  }
+  
+  .tutorial-card {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px var(--shadow);
+    background: linear-gradient(135deg, rgba(255, 69, 0, 0.2), rgba(255, 255, 0, 0.2)); /* Gradient with transparent orange to yellow */
+    transition: all 0.3s ease;
+  }
+  
+  .tutorial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px var(--shadow);
+  }
+  
+  .tutorial-card img {
+    width: 120px;
+    height: auto;
+    margin-right: 2rem;
+    border-radius: 8px;
+  }
+  
+  .tutorial-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .tutorial-content a {
+    color: var(--primary-blue);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+  
+  .tutorial-content a:hover {
+    color: var(--accent-orange);
+    text-decoration: underline;
+  }
+  
+  .tutorial-content p {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    line-height: 1.6;
+  }
+
+  .title{
+    font-size: 2rem;
+  font-weight: 800;
+  font-family: 'Cambria, Cochin', Georgia, Times, 'Times New Roman', serif;
+  text-align: center;
+  color: #0b3e72;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.265);
+  }
+  
+  /* Supplemental Section */
+  .supplemental {
+    width: 30%;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px var(--shadow);
+    background: rgba(255, 255, 0, 0.3); /* Transparent yellow */
+  }
+  
+  .supplemental h3 {
+    font-size: 1.5rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    font-weight: 600;
+    text-align: center;
+    border-bottom: 2px solid var(--primary-blue);
+    padding-bottom: 0.5rem;
+  }
+  
+  .supplemental a {
+    display: block;
+    font-size: 1rem;
+    color: var(--text-dark);
+    text-decoration: none;
+    padding: 0.5rem 0;
+    transition: all 0.3s ease;
+  }
+  
+  .supplemental a:hover {
+    color: var(--primary-blue);
+    text-decoration: underline;
+  }
+  
+  /* Animations */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.02);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .tutorials h2,
+  .supplemental h3 {
+    animation: pulse 1.5s infinite;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .tutorials-container {
+      padding: 1rem;
+    }
+  
+    .content {
+      flex-direction: column;
+    }
+  
+    .tutorials,
+    .supplemental {
+      width: 100%;
+    }
+  
+    .tutorials h2 {
+      font-size: 2rem;
+    }
+  
+    .tutorial-card {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .tutorial-card img {
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
+  
+    .tutorial-content h3 {
+      font-size: 1.25rem;
+    }
+  
+    .tutorial-content p {
+      font-size: 1rem;
+    }
+  
+    .supplemental h3 {
+      font-size: 1.25rem;
+    }
+  
+    .supplemental a {
+      font-size: 0.9rem;
+    }
+  
+    .banner {
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+    }
+  
+    .banner-button {
+      padding: 0.5rem 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .tutorials-container {
+      padding: 0.5rem;
+    }
+  
+    .tutorials h2 {
+      font-size: 1.8rem;
+    }
+  
+    .tutorial-card {
+      padding: 1rem;
+    }
+  
+    .tutorial-card img {
+      width: 80px;
+    }
+  
+    .tutorial-content h3 {
+      font-size: 1.1rem;
+    }
+  
+    .tutorial-content p {
+      font-size: 0.9rem;
+    }
+  
+    .supplemental h3 {
+      font-size: 1.1rem;
+    }
+  
+    .supplemental a {
+      font-size: 0.85rem;
+    }
+  
+    .banner-text {
+      font-size: 0.9rem;
+    }
+  
+    .banner-button {
+      font-size: 0.9rem;
+      padding: 0.4rem 0.8rem;
+    }
+  }
