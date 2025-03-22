@@ -1,4 +1,4 @@
-## Project Overview
+## Cplusplus.com
 CplusPlus.com is a React-based web application designed to provide resources for C++ programming language learners. The project includes several key features:
 
 1. **Home Page**: Features a sidebar navigation, featured content slider, and latest forum activity.
