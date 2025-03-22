@@ -7,6 +7,8 @@ CplusPlus.com is a React-based web application designed to provide resources for
 4. **Tutorials**: Educational content for learning C++ from basics to advanced topics.
 5. **Forum**: Community interaction space for discussions about C++ programming.
 
+
+
 The application uses modern React features including hooks (useState, useEffect), React Router for navigation, and Framer Motion for animations.
 The project follows a component-based architecture with separate CSS files for styling each component.
 
@@ -63,3 +65,7 @@ The project follows a component-based architecture with separate CSS files for s
 - **Responsive Design**: Mobile-friendly with adaptive layouts
 
 The project implements a modern, responsive user interface for C++ learning resources with smooth animations and an organized structure for educational content.
+
+
+## Deployed Application
+**The live version of the project is available at:** https://c-plusplus.netlify.app/
